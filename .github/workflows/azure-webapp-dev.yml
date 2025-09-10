@@ -30,6 +30,11 @@ jobs:
       - name: Zip artifact for deployment
         run: zip -r release.zip ./*
 
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
       - name: Deploy to Azure WebApp (Dev)
         uses: azure/webapps-deploy@v2
         with:
