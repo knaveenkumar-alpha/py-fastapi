@@ -38,6 +38,6 @@ jobs:
       - name: Deploy to Azure WebApp (Dev)
         uses: azure/webapps-deploy@v2
         with:
-          app-name: "py-fastapi-dev"   # ⚡ replace with your Dev App Service name
+          app-name: "py-fastapi"   # ⚡ replace with your Dev App Service name
           publish-profile: ${{ secrets.AZURE_WEBAPP_DEV_PUBLISH_PROFILE }}
           package: release.zip
