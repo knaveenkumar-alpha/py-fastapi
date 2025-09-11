@@ -24,11 +24,8 @@ app = FastAPI()
 import os
 
 # ---------------- GHL Config ---------------- #
-GHL_ENDPOINT = os.getenv("GHL_ENDPOINT", "https://rest.gohighlevel.com/v1/contacts/")
-GHL_BEARER_TOKEN = os.getenv("GHL_BEARER_TOKEN")
-
-if not GHL_BEARER_TOKEN:
-    raise ValueError("GHL_BEARER_TOKEN is not set. Please configure it as an environment variable.")
+GHL_ENDPOINT = "https://rest.gohighlevel.com/v1/contacts/"
+GHL_BEARER_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2NhdGlvbl9pZCI6InVpYjdiNlprTWdkbkh2elpCQ2wyIiwiY29tcGFueV9pZCI6Ik5LRzZKc0ZlUHJDdmxSaXhoeEZ2IiwidmVyc2lvbiI6MSwiaWF0IjoxNzAwMDgwNjE3MTU0LCJzdWIiOiJ1c2VyX2lkIn0.OLfjCBSGK1gCtsz4svrGnCugebXvWXsrA4k-JpUkYgM"
 
 
 # ---------------- Retry Helper ---------------- #
